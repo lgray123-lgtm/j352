@@ -1,0 +1,23 @@
+body {
+  background-color:#ffffff;
+}
+
+h1 {
+  color:#663399;
+}
+
+h2 {
+  color:#663399;
+}
+
+p{color:purple;line-height:20px;text-align:left;font-size:20px;}
+
+li {
+  font-size: 30px; line-height:60px;
+}
+
+
+
+body {
+  background-color: #D3C1E3; /* hex color */
+}
