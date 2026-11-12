@@ -1,0 +1,165 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lillian Gray — Photographs</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <br><br><br>
+<a href="index.html"><h1 style="text-align:center;"> Lillian Gray</h1></a>
+
+
+    <main class="photo-page">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <h1>Lillian Gray</h1>
+
+            <nav>
+                <a href="stories.html">stories</a>
+                <a href="photographs.html">photographs</a>
+                <a href="about.html">about</a>
+            </nav>
+
+        </aside>
+
+
+        <!-- PHOTO COLLAGE -->
+
+        <section class="photo-gallery">
+
+            <div class="photo-grid">
+
+                <img src="images/photo7.jpg" alt="Photograph 1">
+                <img src="images/photo8.jpg" alt="Photograph 2">
+                <img src="images/photo9.jpg" alt="Photograph 3">
+
+                <img src="images/photo10.jpg" alt="Photograph 4">
+                <img src="images/photo11.jpg" alt="Photograph 5">
+                <img src="images/photo12.jpg" alt="Photograph 6">
+
+                <img src="images/photo13.jpg" alt="Photograph 7">
+                <img src="images/photo14.jpg" alt="Photograph 8">
+                <img src="images/photo15.jpg" alt="Photograph 9">
+
+                <img src="images/photo16.jpg" alt="Photograph 10">
+                <img src="images/photo17.jpg" alt="Photograph 11">
+                <img src="images/photo18.jpg" alt="Photograph 12">
+
+                <img src="images/photo19.jpg" alt="Photograph 13">
+                <img src="images/photo20.jpg" alt="Photograph 14">
+                <img src="images/photo21.jpg" alt="Photograph 15">
+
+                <img src="images/photo22.jpg" alt="Photograph 16">
+             <img src="images/photo31.jpg" alt="Photograph 31">
+                             <img src="images/photo33.jpg" alt="Photograph 16">
+
+
+            <img src="images/photo28.jpg" alt="Photograph 16">
+
+
+
+
+
+              
+
+                
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+<!-- EXPANDED PHOTO VIEW -->
+
+<div class="photo-lightbox" id="photoLightbox">
+
+    <button class="photo-close" id="photoClose">
+        &times;
+    </button>
+
+    <img id="largePhoto" src="" alt="Expanded photograph">
+
+</div>
+
+
+<!-- PHOTO VIEWER JAVASCRIPT -->
+
+<script>
+
+const galleryPhotos = document.querySelectorAll(".photo-grid img");
+
+const photoLightbox = document.getElementById("photoLightbox");
+
+const largePhoto = document.getElementById("largePhoto");
+
+const photoClose = document.getElementById("photoClose");
+
+
+// OPEN PHOTO
+
+galleryPhotos.forEach(photo => {
+
+    photo.addEventListener("click", () => {
+
+        largePhoto.src = photo.src;
+
+        largePhoto.alt = photo.alt;
+
+        photoLightbox.classList.add("active");
+
+    });
+
+});
+
+
+// CLOSE PHOTO
+
+function closePhoto() {
+    photoLightbox.classList.remove("active");
+}
+
+photoClose.addEventListener("click", closePhoto);
+
+
+// CLICK OUTSIDE PHOTO TO CLOSE
+
+photoLightbox.addEventListener("click", (event) => {
+
+    if (event.target === photoLightbox) {
+        closePhoto();
+    }
+
+});
+
+
+// ESCAPE KEY
+
+document.addEventListener("keydown", (event) => {
+
+    if (event.key === "Escape") {
+        closePhoto();
+    }
+
+});
+
+</script>
+
+</body>
+</html>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lillian Gray</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="homepage">
+
+        <!-- LEFT SIDE: NAME AND LINKS -->
+
+        <aside class="sidebar">
+            <br><br><br><br>
+
+            <h1>Lillian Gray</h1>
+
+           <nav>
+    <a href="stories.html">stories</a>
+
+    <a href="photographs.html">photographs</a>
+
+    <a href="about.html">about</a>
+</nav>
+
+        </aside>
+
+
+        <!-- RIGHT SIDE: SIX-PHOTO SLIDESHOW -->
+
+        <section class="gallery">
+
+            <div class="slideshow">
+
+                <img
+                    id="mainImage"
+                    src="images/photo1.jpg"
+                    alt="Photography"
+                >
+
+                <button class="arrow previous" id="previous">
+                    &#10094;
+                </button>
+
+                <button class="arrow next" id="next">
+                    &#10095;
+                </button>
+
+                <div class="counter" id="counter">
+                    01 / 06
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- EXPANDED PHOTO VIEW -->
+
+    <div class="lightbox" id="lightbox">
+
+        <button class="close" id="close">&times;</button>
+
+        <button class="lightbox-arrow left" id="lightboxPrevious">
+            &#10094;
+        </button>
+
+        <img id="expandedImage" src="" alt="Expanded photograph">
+
+        <button class="lightbox-arrow right" id="lightboxNext">
+            &#10095;
+        </button>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+
+
+</body>
+
+</html>
